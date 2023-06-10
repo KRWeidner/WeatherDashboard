@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/CSS/styles.css" />
+    <!-- Link the DayJS library -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <title>Weather Dashboard</title>
 </head>
 
@@ -26,10 +29,12 @@
             </section>
         </aside>
         <section class="resultsBody">
-            <h2><span id="currentCityWeather"></span></h2>
-            <p><span id="currentCityTemp"></span></p>
-            <p><span id="currentCityWind"></span></p>
-            <p><span id="currentCityHumidity"></span></p>
+            <section class="currentWeather">
+                <h2><span id="currentCityWeather"></span></h2>
+                <p><span id="currentCityTemp"></span></p>
+                <p><span id="currentCityWind"></span></p>
+                <p><span id="currentCityHumidity"></span></p>
+            </section>
             <section class="forecastSection">
                 <h3>5 Day Forecast:</h3>
             </section>
