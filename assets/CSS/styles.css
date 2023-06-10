@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 400px;
+    height: max-content;
+}
+
+.form-body {
+    height: max-content;
+}
+
+#cityInput {
+    display: block;
+    width: 396px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.btnSubmit {
+    display: block;
+    font-size: large;
+    margin-top: 5px;
+    width: 400px;
+}
+
+.searchHistoryBtns {
+    border-top: 3px solid;
+    margin-top: 10px;
+}
+
+.resultsBody {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 10px;
+}

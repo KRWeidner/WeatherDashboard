@@ -2,23 +2,41 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./assets/CSS/style.css" />
-  <title>Weather Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/CSS/styles.css" />
+    <title>Weather Dashboard</title>
 </head>
 
 <body>
-  <header>
-    <h1>Weather Dashboard</h1>
-  </header>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
 
+    <main>
+        <aside>
+            <h2>Search For A City:</h2>
+            <form class="form-body">
+                <input name="City" id="cityInput" type="text" autofocus="true" />
+                <button type="submit" class="btnSubmit">Search</button>
+            </form>
+            <section class="searchHistoryBtns">
 
-  <main> 
-  </main>
+            </section>
+        </aside>
+        <section class="resultsBody">
+            <h2><span id="currentCityWeather"></span></h2>
+            <p><span id="currentCityTemp"></span></p>
+            <p><span id="currentCityWind"></span></p>
+            <p><span id="currentCityHumidity"></span></p>
+            <section class="searchHistory">
+                <h3>5 Day Forecast:</h3>
+            </section>
+        </section>
+    </main>
 
-  <script src="./assets/JS/scripts.js"></script>
+    <script src="./assets/JS/scripts.js"></script>
 </body>
 
 </html>
