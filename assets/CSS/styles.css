@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -42,6 +43,7 @@ aside {
     width: 396px;
     height: 30px;
     margin-top: 10px;
+    font-size: large;
 }
 
 .btnSubmit {
@@ -49,6 +51,11 @@ aside {
     font-size: large;
     margin-top: 5px;
     width: 400px;
+}
+
+button {
+    background: cornflowerblue;
+    border-radius: 8px;
 }
 
 .searchHistoryBtns {
