@@ -56,7 +56,7 @@ var formSubmitHandler = function (event) {
 
 //makes API call for current weather report. We are searching by the passed input city and converting results to imperial units
 var getWeather = function (city) {
-    var apiUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=' + apiKey;
+    var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=' + apiKey;
 
     fetch(apiUrl)
         .then(function (response) {
@@ -81,7 +81,7 @@ var getWeather = function (city) {
 
 //calling API for 5 day forecast. Again searching by input city and returning imperial units
 var getForecast = function (city) {
-    var apiUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=' + apiKey;
+    var apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=' + apiKey;
 
     fetch(apiUrl)
         .then(function (response) {
