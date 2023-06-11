@@ -29,13 +29,22 @@ body {
     flex-direction: column;
 }
 
+main {
+    margin-left: 15px;
+}
+
 aside {
     display: inline-flex;
     flex-direction: column;
-    margin-left: 15px;
     margin-top: 15px;
     width: 400px;
     height: max-content;
+    margin-right: 15px;
+}
+
+button {
+    background: cornflowerblue;
+    border-radius: 8px;
 }
 
 .searchHistoryBtns Button {
@@ -43,6 +52,12 @@ aside {
     height: 30px;
     font-size: medium;
     margin-top: 5px;
+    background: lightblue;
+}
+
+.searchHistoryBtns {
+    border-top: 3px solid;
+    margin-top: 10px;
 }
 
 .form-body {
@@ -65,29 +80,18 @@ aside {
 }
 
 .currentWeather img {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
 }
 
 .currentStats {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-}
-
-button {
-    background: cornflowerblue;
-    border-radius: 8px;
-}
-
-.searchHistoryBtns {
-    border-top: 3px solid;
-    margin-top: 10px;
 }
 
 .resultsBody {
     display: none;
     flex-direction: column;
-    margin-left: 10px;
 }
 
 .currentWeather {
@@ -101,4 +105,114 @@ button {
 
 .forecastSection {
     margin-top: 30px;
+    display: none;
+    flex-direction: column;
 }
+
+.forecastDays {
+    display: flex;
+    padding: 15px;
+}
+
+.forecastDays p {
+    margin-right:10px;
+}
+
+#forecast1 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px 5px 5px 0;
+    background-color: aquamarine;
+    align-items: center;
+    width:fit-content;
+}
+
+#forecast2 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: aquamarine;
+    align-items: center;
+    width:fit-content;
+}
+
+#forecast3 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: aquamarine;
+    align-items: center;
+    width:fit-content;
+}
+
+#forecast4 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: aquamarine;
+    align-items: center;
+    width:fit-content;
+}
+
+#forecast5 {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background-color: aquamarine;
+    align-items: center;
+    width:fit-content;
+}
+
+/* setting element sizing for tablet size and below */
+@media screen and (max-width: 1023px) {
+    .resultsBody {
+        align-items: center;
+    }
+
+    .currentWeather {
+        max-width: 60%;
+        transition: flex-basis 500ms linear;
+    }
+    
+    .forecastDays {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #forecast5 {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    #forecast4 {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    #forecast3 {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    #forecast2 {
+        flex-direction: row;
+        max-width: 100%;
+    }
+
+    #forecast1 {
+        flex-direction: row;
+        max-width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) { 
+    
+    .currentWeather {
+        max-width: 40%;
+    }
+  }
