@@ -68,6 +68,7 @@ var getWeather = function (city) {
                     cityTemp.textContent="Temp: "+data.main.temp+"°F";
                     cityHumidity.textContent="Humidity: "+data.main.humidity+"%";
                     cityWind.textContent="Wind: "+data.wind.speed+" MPH";
+                    console.log(data);
                     addHistoryButton(city);
                 });
             } else {
@@ -88,13 +89,18 @@ var getForecast = function (city) {
             if (response.ok) {
                 response.json().then(function (data) {
                     var fiveDayForcast =[];
+                    console.log(data);
                     //gettting forecasts for the next 5 days from the noon reading for a mid day predication
                     fiveDayForcast.push(data.list[4]);
                     fiveDayForcast.push(data.list[12]);
                     fiveDayForcast.push(data.list[20]);
                     fiveDayForcast.push(data.list[28]);
                     fiveDayForcast.push(data.list[36]);
-
+                    //remove previously added forecast elements
+                    while(forecastDays.lastChild)
+                    {
+                        forecastDays.removeChild(forecastDays.lastChild);
+                    }
                     var dayCount =1;
                     //for each day forecast, create a new div with 4 new elements for temp, icon, wind, humidity and append it to preexisting class forecastDays
                     fiveDayForcast.forEach(item => {
