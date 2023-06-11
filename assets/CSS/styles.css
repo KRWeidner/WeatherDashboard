@@ -4,6 +4,7 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* section for styling the site header and title */
 header {
     background: cornflowerblue;
     display: flex;
@@ -19,6 +20,8 @@ h1 {
     width: max-content;
 }
 
+/* section for styling main body elements */
+
 p {
     margin-top: 10px;
 }
@@ -33,6 +36,7 @@ main {
     margin-left: 15px;
 }
 
+/* styles the aside element which contains the user input text box, search button, and history buttons */
 aside {
     display: inline-flex;
     flex-direction: column;
@@ -60,12 +64,13 @@ button {
     margin-top: 10px;
 }
 
+/*  styles form elements */
+
 .form-body {
     height: max-content;
 }
 
 #cityInput {
-    display: block;
     width: 396px;
     height: 30px;
     margin-top: 10px;
@@ -79,6 +84,7 @@ button {
     width: 400px;
 }
 
+/* below styles the main content that displays the weather output */
 .currentWeather img {
     display: flex;
     flex-direction: column;
@@ -94,6 +100,7 @@ button {
     flex-direction: column;
 }
 
+/* currentWeather class displays the main current weather stats displayed */
 .currentWeather {
     border: 3px solid cornflowerblue;
     padding: 10px;
@@ -103,6 +110,7 @@ button {
     align-items: center;
 }
 
+/* styles the 5 day forecast section and elements */
 .forecastSection {
     margin-top: 30px;
     display: none;
@@ -118,6 +126,7 @@ button {
     margin-right:10px;
 }
 
+/* styles each of the 5 day weather forecasts by day */
 #forecast1 {
     display: flex;
     flex-direction: column;
@@ -176,7 +185,6 @@ button {
 
     .currentWeather {
         max-width: 60%;
-        transition: flex-basis 500ms linear;
     }
     
     .forecastDays {
@@ -210,8 +218,8 @@ button {
     }
   }
   
+  /* setting element sizing for mobile size and below */
   @media screen and (max-width: 600px) { 
-    
     .currentWeather {
         max-width: 40%;
     }
