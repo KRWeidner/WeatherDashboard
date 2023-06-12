@@ -51,6 +51,12 @@ button {
     border-radius: 8px;
 }
 
+/* adding hover effect to buttons to change cursor and opacity so indicate user is on button */
+button:hover {
+    opacity: 80%;
+    cursor: pointer;
+}
+
 .searchHistoryBtns Button {
     width: 400px;
     height: 30px;
