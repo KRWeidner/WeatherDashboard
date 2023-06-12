@@ -25,10 +25,8 @@ if (savedCities != null) {
     citiesArray.forEach(item => {
         var newButton = document.createElement("button");
         newButton.textContent = item.toUpperCase();
-        newButton.setAttribute("id",item+"_Button");
+        newButton.setAttribute("data-previousSearch",item);
         pastCitiesBtnSection.append(newButton);
-
-       // newButton.addEventListener('click', searchPastHistory(item));
     });
 }
 
@@ -150,7 +148,7 @@ var addHistoryButton = function(passCity){
         var newButton = document.createElement("button");
         newButton.textContent = city;
         pastCitiesBtnSection.append(newButton);
-        newButton.setAttribute("id",city+"Button");
+        newButton.setAttribute("data-previousSearch",city);
     }
     //set local storage
     localStorage.setItem("cities", JSON.stringify(citiesArray));
@@ -159,25 +157,10 @@ var addHistoryButton = function(passCity){
 //form event listener
 formBody.addEventListener('submit', formSubmitHandler);
 
-//console.log(pastCitiesBtnSection.children);
-// console.log(pastCitiesBtnSection.childElementCount);
-
-//  for(var i=0; i< pastCitiesBtnSection.childElementCount;i++)
-//  {
-    
-//      console.log(pastCitiesBtnSection.children[i]);
-//      var str = pastCitiesBtnSection.children[i].id;
-//      var mySubString = str.substring(
-//         str.indexOf("#") , 
-//         str.lastIndexOf("_")
-//     );
-//      console.log(str + " HERE");
-//      document.body.addEventListener('click', function (event) {
-//         if(event.target.id == str)
-//         {
-//             searchPastHistory(mySubString);
-//         }
-//      });
-     
-//      //pastCitiesBtnSection.children[i].addEventListener('click',searchPastHistory(str));
-//  }
+//add event listener to the button section. Grab event target value which will be
+//city and then pass that to searchPastHistory funcion to run api search
+pastCitiesBtnSection.addEventListener('click', function(event){
+    var buttonTarget = event.target;
+    var city = buttonTarget.getAttribute("data-previousSearch");
+    searchPastHistory(city);
+});
