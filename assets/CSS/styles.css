@@ -185,9 +185,6 @@ button:hover {
 
 /* setting element sizing for tablet size and below */
 @media screen and (max-width: 1023px) {
-    .resultsBody {
-        align-items: center;
-    }
 
     .currentWeather {
         max-width: 60%;

@@ -34,7 +34,7 @@ var searchPastHistory = function (city) {
     console.log(city);
     getWeather(city);
     getForecast(city);
-    resultsBody.setAttribute("style","display:flex")
+    resultsBody.setAttribute("style","display:inline-flex")
     forecastSection.setAttribute("style","display:flex");
 }
 
